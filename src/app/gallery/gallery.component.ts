@@ -3,8 +3,14 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-gallery",
-  templateUrl: "./gallery.component.html",
-  styleUrls: ["./gallery.component.scss"],
+  template: `<div class="gallery-wrapper">
+    <div class="gallery-title">
+      <h1>Gallery Title</h1>
+    </div>
+    <div class="gallery-content">
+      <ng-content></ng-content>
+    </div>
+  </div>`,
   providers: [GalleryLoggerService],
 })
 export class GalleryComponent implements OnInit {
