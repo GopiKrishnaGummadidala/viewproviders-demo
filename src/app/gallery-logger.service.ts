@@ -1,9 +1,14 @@
-import { Injectable } from '@angular/core';
+import { ILogger } from "./logger";
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
-export class GalleryLoggerService {
+export class GalleryLoggerService implements ILogger {
+  private _prefix = "Gallery Log";
+  constructor() {}
 
-  constructor() { }
+  logMessage(msg: string): void {
+    console.log(`${this._prefix} : ${msg}`);
+  }
 }

@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-gallery-slide',
-  templateUrl: './gallery-slide.component.html',
-  styleUrls: ['./gallery-slide.component.scss']
+  selector: "app-gallery-slide",
+  template: `<p>I'm a slide</p>
+    <p></p>`,
 })
 export class GallerySlideComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
