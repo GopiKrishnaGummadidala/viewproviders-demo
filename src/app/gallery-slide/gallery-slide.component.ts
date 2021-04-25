@@ -1,12 +1,14 @@
 import { Component, OnInit } from "@angular/core";
+import { GalleryLoggerService } from "../gallery-logger.service";
 
 @Component({
   selector: "app-gallery-slide",
-  template: `<p>I'm a slide</p>
-    <p></p>`,
+  template: `<p>I'm a slide</p>`,
 })
 export class GallerySlideComponent implements OnInit {
-  constructor() {}
+  constructor(private _logger: GalleryLoggerService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this._logger.logMessage("Slide Initialization");
+  }
 }
