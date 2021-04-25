@@ -11,7 +11,7 @@ import { Component, OnInit } from "@angular/core";
       <ng-content></ng-content>
     </div>
   </div>`,
-  providers: [GalleryLoggerService],
+  viewProviders: [GalleryLoggerService],
 })
 export class GalleryComponent implements OnInit {
   constructor(private _logger: GalleryLoggerService) {}
